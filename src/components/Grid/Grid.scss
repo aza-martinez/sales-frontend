@@ -1,0 +1,22 @@
+.grid {
+   border: 1px solid #eee;
+   border-collapse: collapse;
+   max-width: inherit;
+   width: 100%;
+   overflow-x: auto;
+   text-align: center;
+   &__column {
+      margin: 0;
+      padding: 0;
+      background-color:#0A032F; 
+      color: #fff;
+      padding: 8px;
+   }
+   &__row {
+      border: 1px solid #0A032F;
+   }
+
+   &__row--item {
+      padding: 8px;
+   }
+}
