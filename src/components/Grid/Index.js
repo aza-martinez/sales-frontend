@@ -10,30 +10,33 @@ const COLUMNS = [
   { value: "UserName", label: "Usuario" },
 ];
 
-const Grid = ({ data }) => {
+const Grid = ({ data, title }) => {
   return (
-    <table className="grid">
-      <thead className="grid___head">
-        <tr className="grid__row">
-          {COLUMNS &&
-            COLUMNS.map((column) => (
-              <th className="grid__column">{column.label}</th>
-            ))}
-        </tr>
-      </thead>
-      <tbody className="grid__body">
-        {data.map((d) => {
-          return (
-            <tr className="grid__row">
-              {COLUMNS.map(({ value }) => (
-                <td className="grid__row--item">{d[value]}</td>
+    <div className="grid">
+      <h3 className="grid__title">{title}</h3>
+      <table className="grid__table">
+        <thead className="grid__head">
+          <tr className="grid__row">
+            {COLUMNS &&
+              COLUMNS.map((column) => (
+                <th className="grid__column">{column.label}</th>
               ))}
-            </tr>
-          );
-        })}
-        <tr></tr>
-      </tbody>
-    </table>
+          </tr>
+        </thead>
+        <tbody className="grid__body">
+          {data.map((d) => {
+            return (
+              <tr className="grid__row">
+                {COLUMNS.map(({ value }) => (
+                  <td className="grid__row--item">{d[value]}</td>
+                ))}
+              </tr>
+            );
+          })}
+          <tr></tr>
+        </tbody>
+      </table>
+    </div>
   );
 };
 

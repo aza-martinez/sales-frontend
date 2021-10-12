@@ -5,18 +5,23 @@ import StateUser from "./context/UserContext/StateUser";
 import StateTeam from "./context/TeamContext/StateTeam";
 import GridSalesByTeam from "./components/Sales/GridSalesByTeam";
 import "./assets/styles/_global.scss";
+import "./App.scss";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <StateUser>
         <StateTeam>
           <Header />
-          <Filter />
-          <GridSalesByUser />
-          <GridSalesByTeam />
+          <div class="app__content">
+            <Filter />
+            <GridSalesByUser />
+            <GridSalesByTeam />
+          </div>
         </StateTeam>
       </StateUser>
+      <Footer />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { memo } from "react";
 import ReactSelect from "react-select";
 import "./Dropdown.scss";
 
@@ -10,4 +11,4 @@ const Dropdown = ({ label, ...props }) => {
   );
 };
 
-export default Dropdown;
+export default memo(Dropdown);

@@ -1,22 +1,35 @@
 .grid {
-   border: 1px solid #eee;
-   border-collapse: collapse;
-   max-width: inherit;
-   width: 100%;
-   overflow-x: auto;
-   text-align: center;
-   &__column {
-      margin: 0;
-      padding: 0;
-      background-color:#0A032F; 
-      color: #fff;
-      padding: 8px;
-   }
-   &__row {
-      border: 1px solid #0A032F;
-   }
+  border-collapse: collapse;
+  width: 100%;
+  overflow-x: auto;
+  text-align: center;
+  margin: 2rem 0;
+ 
+  &__title {
+    text-align: left;
+    font-size: 1.5rem;
+  }
 
-   &__row--item {
-      padding: 8px;
-   }
+  &__table {
+    width: 100%;
+    border: 1px solid #eee;
+    -webkit-box-shadow:  0 .125rem .25rem rgba(0,0,0,.075);
+    box-shadow: 1 1.125rem .25rem rgb(34, 1, 1)!important;
+  }
+
+  &__column {
+    background-color: #0a032f;
+    color: #fff;
+    padding: 8px;
+  }
+  &__row {
+    border: 1px solid #0a032f;
+    &:hover {
+      background-color: rgb(245, 245, 253);
+    }
+  }
+
+  &__row--item {
+    padding: 8px;
+  }
 }

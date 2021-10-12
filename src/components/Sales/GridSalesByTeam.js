@@ -24,8 +24,7 @@ const GridSalesByTeam = () => {
 
   return (
     <div className="container">
-      <h1>Ventas por Equipo</h1>
-      <Grid data={sales} />
+      <Grid data={sales} title={"Ventas por equipo"} />
     </div>
   );
 };
